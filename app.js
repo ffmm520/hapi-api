@@ -1,7 +1,7 @@
 const Hapi = require('@hapi/hapi');
 const Joi = require('@hapi/joi');
 
-require('dotenv').config()
+require('dotenv').config();
 
 const { port, host } = require('./config');
 const routes = require('./routes/hello-hapi');
@@ -21,7 +21,7 @@ const server = new Hapi.Server({
 const init = async () => {
   await server.register([
     ...swagger,
-    log
+    // log
   ]);
 
   server.route([
