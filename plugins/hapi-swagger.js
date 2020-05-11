@@ -10,7 +10,7 @@ module.exports = [
     plugin: hapiSwagger,
     options: {
       info: {
-        title: '接口文档',
+        title: 'hapi-api 接口文档',
         version: package.version
       },
       // 定义接口以 tags 属性分组
