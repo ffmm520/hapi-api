@@ -32,20 +32,22 @@ module.exports = [
 		method: 'POST',
 		path: `/${GROUP_NAME}/{orderId}/pay`,
 		handler: async (request, reply) => {
-			const { orderId } = request.params
+			// const { orderId } = request.params
 			// const { error, value } = schema.validate({orderId});
-			const result = await ordersValidate({ orderId })
+			// const result = await ordersValidate({ orderId })
 			/* if (error) {
         return error.message;
       } */
-			return result
+			return 'params valid';
 		},
-		/* options: {
+		options: {
       tags: ['api', GROUP_NAME],
       description: '支付某订单',
       validate: {
-          payload: schema
-      } */
+          params: Joi.object({
+						orderId: Joi.string().max(5).required()
+					})
+      }
 	},
 	/* config: {
       tags: ['api', GROUP_NAME],
@@ -58,5 +60,5 @@ module.exports = [
         }
       }
     } */
-	// }
+	}
 ]

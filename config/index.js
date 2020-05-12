@@ -1,6 +1,6 @@
-const { HOST, PORT } = process.env;
+const { HOST_DEV, PORT_DEV } = process.env;
 
 module.exports = {
-  port: PORT,
-  host: HOST
+  port: PORT_DEV,
+  host: HOST_DEV
 }

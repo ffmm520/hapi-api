@@ -5,7 +5,7 @@ module.exports = [
   // 路由1：/hapi
   {
     method: 'GET',
-    path: '/hapi/',
+    path: '/hapi',
     handler: async (req, res) => {
       return 'hello hapi';
     },

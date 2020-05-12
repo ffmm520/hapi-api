@@ -2,6 +2,7 @@ const Hapi = require('@hapi/hapi');
 const Joi = require('@hapi/joi');
 
 require('dotenv').config();
+require('./config/config');
 
 const { port, host } = require('./config');
 const routes = require('./routes/hello-hapi');
